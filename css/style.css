@@ -1,0 +1,321 @@
+@font-face{
+	font-family: 'oatmealandraisins';
+	src: url('../fonts/oatmeal and raisins.ttf');
+	font-weight: normal;
+	font-style: normal;
+} 
+
+html{
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	width: 100%;
+	height: 100%;
+}
+
+.container.home, .container#bottom{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.container .row.home{
+	height: 70%;
+}
+
+.container .row.next{
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+	margin: auto;
+	margin-left: -15px;
+}
+
+.container#bottom .description{
+	height: 94%;
+	width: 64%;
+	background-image: url("../img/bande_film.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
+	margin: auto;
+}
+
+.container#bottom .description .content{
+	width: 68%;
+	height: 100%;
+	margin: auto;
+	padding-top: 13.5%
+}
+
+.login, .suscribe{
+	margin-top: 5%;
+	height: 100%;
+}
+
+div#divLogin, div#divSuscribe{
+	height: 31%;
+	width: 31%;
+	margin: auto;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	transition: width 0.6s, height 0.6s;
+}
+
+div#divLogin{	
+	background-image: url("../img/polaroid_connexion.png");
+	-webkit-transform: rotate(-35deg);
+	transform: rotate(-35deg);
+	transition: transform 0.6s;
+}
+
+
+div#divSuscribe{
+	background-image: url("../img/polaroid_inscription.png");
+	-webkit-transform: rotate(40deg);
+	transform: rotate(40deg);
+	transition: transform 0.6s;
+}
+
+
+div#divLogin:hover, div#divSuscribe:hover{
+	border: solid 1px black;
+}
+
+div#divLogin form, div#divSuscribe form{
+	display:none;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+div#divLogin form label, div#divSuscribe form label{
+	color: white;
+	position: absolute;
+	left: 6%;
+}
+
+div#divLogin form input[type="text"], 
+div#divSuscribe form input[type="text"]{
+	position: absolute;
+	right: 10%;
+}
+
+div#divLogin form label#Id, div#divLogin form input#Id{
+	margin-top: 25%;
+}
+
+div#divSuscribe form label#Pseudo, div#divSuscribe form input#Pseudo{
+	margin-top: 20%;
+}
+
+div#divSuscribe form label#mail, div#divSuscribe form input#mail{
+	margin-top: 30%;
+}
+
+div#divLogin form label#Mdp, div#divLogin form input#Mdp{
+	margin-top: 35%;
+}
+
+div#divSuscribe form label#Mdp, div#divSuscribe form input#Mdp{
+	margin-top: 40%;
+}
+
+div#divSuscribe form label#Mdpbis, div#divSuscribe form input#Mdpbis{
+	margin-top: 50%;
+}
+
+div#divLogin form button[type="submit"],
+div#divSuscribe form button[type="submit"]{
+	position: absolute;
+	width: 40%;
+    height: 10%;
+    left: 30%;
+    bottom: 3%;
+    border: 0;
+    background: transparent;
+}
+
+div#divLogin form button[type="submit"] img,
+div#divSuscribe form button[type="submit"] img{
+	width: 100%;
+	height: 100%;
+}
+
+div#divSuscribe.active, div#divLogin.active{
+	border: none;
+    transform: rotate(0deg);
+    width: auto;
+    height: 100%;
+    transition: transform 0.6s, width 0.6s, height 0.6s;
+    background: url(http://localhost/IMGzat/img/polaroid.jpg) 50% 50% / auto 100% no-repeat;
+}
+
+div#divSuscribe.active form, div#divLogin.active form{
+	display: block;
+}
+
+div.galerie{
+	height: 100%;
+}
+
+div.galerie a{
+	position: absolute;
+	bottom: 10%;	
+	left: 0;
+	background-image: url("../img/negatif_galerie.png");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	width: 100%;
+	height: 14%;
+	transform: rotate(10deg);
+}
+
+form label{
+	font-family: 'oatmealandraisins';
+	font-size: 120%;
+	width: 40%;
+}
+
+form input[type="text"]{
+	width: 35%;
+}
+
+/* size screen 1280*1024 */
+
+@media screen and (min-height: 900px) and (max-height: 920px){
+	div#divLogin, div#divSuscribe{
+		width: 40%;
+	}
+
+	div#divSuscribe.active, div#divLogin.active {
+		background: url(http://localhost/IMGzat/img/polaroid.jpg) 50% 50% / auto 75% no-repeat;
+	}
+
+	div#divLogin form label#Id, div#divLogin form input#Id {
+    	margin-top: 40%;
+	}
+
+	div#divLogin form label#Mdp, div#divLogin form input#Mdp {
+    	margin-top: 55%;
+	}
+
+	div#divLogin form button[type="submit"], div#divSuscribe form button[type="submit"] {
+		bottom: 14%;
+	}
+
+	div#divSuscribe form label#Pseudo, div#divSuscribe form input#Pseudo {
+    	margin-top: 32%;
+	}
+
+	div#divSuscribe form label#mail, div#divSuscribe form input#mail {
+    	margin-top: 45%;
+	}
+
+	div#divSuscribe form label#Mdp, div#divSuscribe form input#Mdp {
+   		margin-top: 58%;
+	}
+
+	div#divSuscribe form label#Mdpbis, div#divSuscribe form input#Mdpbis {
+    	margin-top: 70%;
+	}
+
+	.container#bottom .description .content {
+	    padding-top: 19%;
+	}
+}
+
+
+@media screen and (min-height: 350px) and (max-height: 500px){
+	form label{
+		font-size: 10px;
+	}
+
+	div#divLogin, div#divSuscribe{
+		width: 40%;
+	}
+
+	div#divSuscribe.active, div#divLogin.active {
+		background: url(http://localhost/IMGzat/img/polaroid.jpg) 50% 50% / auto 75% no-repeat;
+	}
+
+	div#divLogin form label#Id, div#divLogin form input#Id {
+    	margin-top: 40%;
+	}
+
+	div#divLogin form label#Mdp, div#divLogin form input#Mdp {
+    	margin-top: 55%;
+	}
+
+	div#divLogin form button[type="submit"], div#divSuscribe form button[type="submit"] {
+		bottom: 14%;
+	}
+
+	div#divSuscribe form label#Pseudo, div#divSuscribe form input#Pseudo {
+    	margin-top: 32%;
+	}
+
+	div#divSuscribe form label#mail, div#divSuscribe form input#mail {
+    	margin-top: 45%;
+	}
+
+	div#divSuscribe form label#Mdp, div#divSuscribe form input#Mdp {
+   		margin-top: 58%;
+	}
+
+	div#divSuscribe form label#Mdpbis, div#divSuscribe form input#Mdpbis {
+    	margin-top: 70%;
+	}
+
+	.container#bottom .description .content {
+	    padding-top: 19%;
+	}
+}
+
+@media screen and (min-width: 900px) and (max-width: 1000px){
+	form label{
+		font-size: 10px;
+	}
+
+	div#divLogin, div#divSuscribe{
+		width: 40%;
+	}
+
+	div#divSuscribe.active, div#divLogin.active {
+		background: url(http://localhost/IMGzat/img/polaroid.jpg) 50% 50% / auto 75% no-repeat;
+	}
+
+	div#divLogin form label#Id, div#divLogin form input#Id {
+    	margin-top: 40%;
+	}
+
+	div#divLogin form label#Mdp, div#divLogin form input#Mdp {
+    	margin-top: 55%;
+	}
+
+	div#divLogin form button[type="submit"], div#divSuscribe form button[type="submit"] {
+		bottom: 14%;
+	}
+
+	div#divSuscribe form label#Pseudo, div#divSuscribe form input#Pseudo {
+    	margin-top: 32%;
+	}
+
+	div#divSuscribe form label#mail, div#divSuscribe form input#mail {
+    	margin-top: 45%;
+	}
+
+	div#divSuscribe form label#Mdp, div#divSuscribe form input#Mdp {
+   		margin-top: 58%;
+	}
+
+	div#divSuscribe form label#Mdpbis, div#divSuscribe form input#Mdpbis {
+    	margin-top: 70%;
+	}
+
+	.container#bottom .description .content {
+	    padding-top: 19%;
+	}
+}
